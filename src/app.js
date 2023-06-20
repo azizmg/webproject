@@ -16,22 +16,14 @@ hbs.registerPartials(partial_path)
 app.get('/',(req,res)=>{
     res.render('index')
 })
-// app.get('/*',(req,res)=>{
-//     res.send('opps! page not found')
-// })
+
 app.get('/about',(req,res)=>{
     res.render('about')
 })
-// app.get('/about/*',(req,res)=>{
-//     res.send('Eror 404 page not found')
-// })
+
 app.get('/weather',(req,res)=>{
     res.render('weather')
 })
-// app.get('/contact/*',(req,res)=>{
-
-//     res.send('Error page not found 404')
-// })
 app.get('*',(req,res)=>{
     res.render('404error',{
         errormsg:'opps! Page Not Found'
